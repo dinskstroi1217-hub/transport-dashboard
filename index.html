@@ -105,6 +105,22 @@
   .badge.bg-danger  { background: var(--danger) !important; color: #fff; }
   .badge.bg-secondary { background: var(--card2) !important; color: var(--muted); border: 1px solid var(--line); }
 
+  /* Селектор периода в правом верхнем углу, слева от темы */
+  .period-selector {
+    position: fixed; top: 16px; right: 64px;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+    padding: 6px 14px; font-size: 13px;
+    z-index: 1000;
+  }
+  .period-selector label { color: var(--muted); margin: 0; font-size: 12px; }
+  .period-selector select {
+    background: transparent; border: none; color: var(--text);
+    font-size: 13px; cursor: pointer; outline: none;
+    padding: 0 4px;
+  }
+  .period-selector select option { background: var(--card); color: var(--text); }
+
   /* Переключатель темы (солнце/луна, как у ЗП) */
   .theme-toggle {
     position: fixed; top: 16px; right: 16px;
@@ -125,6 +141,14 @@
 </head>
 <body>
 <a id="top"></a>
+
+<div class="period-selector">
+  <label for="period-select">Период:</label>
+  <select id="period-select" onchange="if (this.value) window.location.href = this.value;">
+    <option value="index.html" selected>Апрель 2026</option><option value="archive/2026-03-01_2026-03-31.html">Март 2026</option>
+  </select>
+</div>
+
 <button id="themeToggle" class="theme-toggle" aria-label="Сменить тему" title="Тёмная / Светлая">
   <span class="moon">🌙</span><span class="sun">☀️</span>
 </button>
