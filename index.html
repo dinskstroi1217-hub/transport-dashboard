@@ -3,53 +3,55 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>🚛 Транспорт ДКБИ — 2026-04-01_2026-04-30</title>
+<title>🚛 Транспорт ДКБИ — 2026-07-01_2026-07-31</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
-  /* === Темы (как у дашборда ЗП ДКБИ) === */
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+  /* === Корп-дизайн ДКБИ «Engineered» v2.0 (dkbi-design.css) === */
   :root {
-    /* DARK MINT (по умолчанию) */
-    --bg: #0b1612;
-    --card: #14211d;
-    --card2: #1b2b25;
-    --line: #1f3029;
-    --text: #e8efed;
-    --muted: #a0b3ac;
-    --accent: #6fd4a3;
-    --accent2: #9eddc2;
-    --warn: #f0c674;
-    --danger: #ef7575;
-    --purple: #a78bfa;
-    --orange: #f4a261;
-    --h-color: #f5fbf8;
-    --row-hover: rgba(111, 212, 163, 0.08);
-    --note-bg: rgba(240, 198, 116, 0.10);
+    /* Корп-дизайн ДКБИ «Engineered» v2.0 — тёмная (dkbi-design.css dark) */
+    --bg: #0B0E14;
+    --card: #14181F;
+    --card2: #1B212B;
+    --line: #262D38;
+    --text: #EDF0F5;
+    --muted: #9AA3B2;
+    --accent: #5B7CFF;
+    --accent2: #7590FF;
+    --warn: #E8B24A;
+    --danger: #F0696E;
+    --purple: #C6F24E;
+    --orange: #E8B24A;
+    --h-color: #EDF0F5;
+    --row-hover: rgba(91, 124, 255, 0.08);
+    --note-bg: rgba(232, 178, 74, 0.10);
   }
   :root[data-theme="light"] {
-    /* LIGHT SAND (песочная) */
-    --bg: #f3ede0;
-    --card: #ebe3d2;
-    --card2: #ddd2bc;
-    --line: #d2c5aa;
-    --text: #2a2620;
-    --muted: #7a7268;
-    --accent: #2f6e54;
-    --accent2: #3f8a6e;
-    --warn: #b07f2d;
-    --danger: #a64545;
-    --purple: #8a6cc4;
-    --orange: #c4733a;
-    --h-color: #1a1714;
-    --row-hover: rgba(47, 110, 84, 0.08);
-    --note-bg: rgba(176, 127, 45, 0.10);
+    /* Корп-дизайн ДКБИ — светлая (dkbi-design.css light) */
+    --bg: #FBFCFE;
+    --card: #FFFFFF;
+    --card2: #F3F5F9;
+    --line: #E6E9F0;
+    --text: #0E1116;
+    --muted: #565E6C;
+    --accent: #2B50E6;
+    --accent2: #1F3FC4;
+    --warn: #D98A00;
+    --danger: #E5484D;
+    --purple: #B8E62E;
+    --orange: #D98A00;
+    --h-color: #0E1116;
+    --row-hover: rgba(43, 80, 230, 0.08);
+    --note-bg: rgba(217, 138, 0, 0.10);
   }
 
   body {
     background: var(--bg); color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Hanken Grotesk', system-ui, -apple-system, "Segoe UI", sans-serif;
     transition: background 0.2s ease, color 0.2s ease;
   }
-  h1, h2, h3, h4, h5 { color: var(--h-color); }
+  h1, h2, h3, h4, h5 { color: var(--h-color); font-family: 'Archivo', 'Hanken Grotesk', sans-serif; letter-spacing: -.02em; }
+  .dk-num, .kpi-value, td.num, .table td { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   h2 { font-size: 1.6rem; }
 
   /* Bootstrap-override под темы */
@@ -145,7 +147,7 @@
 <div class="period-selector">
   <label for="period-select">Период:</label>
   <select id="period-select" onchange="if (this.value) window.location.href = this.value;">
-    <option value="index.html" selected>Апрель 2026</option><option value="archive/2026-03-01_2026-03-31.html">Март 2026</option>
+    <option value="index.html" selected>Июль 2026</option><option value="archive/2026-06-01_2026-06-30.html">Июнь 2026</option><option value="archive/2026-05-01_2026-05-31.html">Май 2026</option><option value="archive/2026-04-01_2026-04-30.html">Апрель 2026</option><option value="archive/2026-03-01_2026-03-31.html">Март 2026</option><option value="archive/2026-02-01_2026-02-28.html">Февраль 2026</option>
   </select>
 </div>
 
@@ -180,10 +182,10 @@
     <div>
       <h1 class="mb-0">🚛 Транспорт ДКБИ</h1>
       <div class="text-muted small">
-        Период: <strong>2026-04-01_2026-04-30</strong> · Обновлено: 2026-05-21 10:58:17 UTC
+        Период: <strong>2026-07-01_2026-07-31</strong> · Обновлено: 2026-09-01 08:21:03 UTC
       </div>
     </div>
-    <div class="mt-2"><span class="badge me-2 mb-1 fs-6 bg-success">anomalies: 13</span><span class="badge me-2 mb-1 fs-6 bg-success">glonass_roster: 84</span><span class="badge me-2 mb-1 fs-6 bg-success">repairs: 44</span><span class="badge me-2 mb-1 fs-6 bg-success">shipments: 3059</span></div>
+    <div class="mt-2"><span class="badge me-2 mb-1 fs-6 bg-success">anomalies: 16</span><span class="badge me-2 mb-1 fs-6 bg-success">glonass_roster: 81</span><span class="badge me-2 mb-1 fs-6 bg-success">repairs: 49</span><span class="badge me-2 mb-1 fs-6 bg-success">shipments: 3562</span></div>
   </div>
 
   
@@ -191,8 +193,8 @@
   <div class="col-6 col-md-3">
     <div class="kpi-card kpi-blue">
       <div class="kpi-label">Затраты владения</div>
-      <div class="kpi-value">23.74 млн ₽</div>
-      <div class="kpi-sub">за 2026-04-01_2026-04-30</div>
+      <div class="kpi-value">27.46 млн ₽</div>
+      <div class="kpi-sub">за 2026-07-01_2026-07-31</div>
     </div>
   </div>
   <div class="col-6 col-md-3">
@@ -205,14 +207,14 @@
   <div class="col-6 col-md-3">
     <div class="kpi-card kpi-orange">
       <div class="kpi-label">Активных машин</div>
-      <div class="kpi-value">102/84</div>
+      <div class="kpi-value">110/81</div>
       <div class="kpi-sub">из ГЛОНАСС-парка</div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="kpi-card kpi-green">
       <div class="kpi-label">💰 Потенциал экономии</div>
-      <div class="kpi-value">1.78 млн ₽</div>
+      <div class="kpi-value">1.65 млн ₽</div>
       <div class="kpi-sub">в месяц по рекомендациям</div>
     </div>
   </div>
@@ -222,7 +224,7 @@
 <section id="candidates" class="mt-4">
   <h3>🔴 Кандидаты на замену</h3>
   <p class="text-muted small mb-3">Lifecycle score ≥ 0.7 — содержание дороже чем покупка новой машины.</p>
-  <div class="row g-2"><div class="col-md-6 col-lg-4 mb-2"><div class="card border-danger"><div class="card-body py-2 px-3"><div class="d-flex justify-content-between align-items-baseline"><strong>5379</strong><span class="badge bg-danger">score 0.70</span></div><div class="small text-muted">None · 9 лет · —</div><div class="small mt-1">Запчасти за период: <strong>228к ₽</strong></div></div></div></div></div>
+  <div class="row g-2"><div class="col-md-6 col-lg-4 mb-2"><div class="card border-danger"><div class="card-body py-2 px-3"><div class="d-flex justify-content-between align-items-baseline"><strong>617</strong><span class="badge bg-danger">score 0.80</span></div><div class="small text-muted">Насос · 36 лет · ТИМ</div><div class="small mt-1">Запчасти за период: <strong>557к ₽</strong></div></div></div></div><div class="col-md-6 col-lg-4 mb-2"><div class="card border-danger"><div class="card-body py-2 px-3"><div class="d-flex justify-content-between align-items-baseline"><strong>428</strong><span class="badge bg-danger">score 0.70</span></div><div class="small text-muted">Тягач · 8 лет · НТ</div><div class="small mt-1">Запчасти за период: <strong>263к ₽</strong></div></div></div></div></div>
 </section>
 
   <section id="actions" class="mt-4">
@@ -232,8 +234,8 @@
 <div class="card mb-2 border-danger" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🔴 <strong>Спецтех 573 простаивал 30 дн без ремонта</strong></div>
-      <div class="text-success"><strong>107к ₽/мес</strong></div>
+      <div>🔴 <strong>Насос 617 простаивал 28 дн без ремонта</strong></div>
+      <div class="text-success"><strong>466к ₽/мес</strong></div>
     </div>
     <div class="small text-muted mt-1">Проверить с механиком: ремонт? хранение? Если ремонт >300к — продать. Иначе — найти заказы или вывести из парка.</div>
   </div>
@@ -241,8 +243,44 @@
 <div class="card mb-2 border-danger" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🔴 <strong>Спецтех 7870 простаивал 29 дн без ремонта</strong></div>
-      <div class="text-success"><strong>46к ₽/мес</strong></div>
+      <div>🔴 <strong>Тягач 790 простаивал 31 дн без ремонта</strong></div>
+      <div class="text-success"><strong>278к ₽/мес</strong></div>
+    </div>
+    <div class="small text-muted mt-1">Проверить с механиком: ремонт? хранение? Если ремонт >300к — продать. Иначе — найти заказы или вывести из парка.</div>
+  </div>
+</div>
+<div class="card mb-2 border-danger" style="border-left-width: 4px;">
+  <div class="card-body py-2">
+    <div class="d-flex justify-content-between">
+      <div>🔴 <strong>Спецтех 7835 простаивал 31 дн без ремонта</strong></div>
+      <div class="text-success"><strong>180к ₽/мес</strong></div>
+    </div>
+    <div class="small text-muted mt-1">Проверить с механиком: ремонт? хранение? Если ремонт >300к — продать. Иначе — найти заказы или вывести из парка.</div>
+  </div>
+</div>
+<div class="card mb-2 border-danger" style="border-left-width: 4px;">
+  <div class="card-body py-2">
+    <div class="d-flex justify-content-between">
+      <div>🔴 <strong>Спецтех 523 простаивал 29 дн без ремонта</strong></div>
+      <div class="text-success"><strong>75к ₽/мес</strong></div>
+    </div>
+    <div class="small text-muted mt-1">Проверить с механиком: ремонт? хранение? Если ремонт >300к — продать. Иначе — найти заказы или вывести из парка.</div>
+  </div>
+</div>
+<div class="card mb-2 border-danger" style="border-left-width: 4px;">
+  <div class="card-body py-2">
+    <div class="d-flex justify-content-between">
+      <div>🔴 <strong>Спецтех 629 простаивал 29 дн без ремонта</strong></div>
+      <div class="text-success"><strong>72к ₽/мес</strong></div>
+    </div>
+    <div class="small text-muted mt-1">Проверить с механиком: ремонт? хранение? Если ремонт >300к — продать. Иначе — найти заказы или вывести из парка.</div>
+  </div>
+</div>
+<div class="card mb-2 border-danger" style="border-left-width: 4px;">
+  <div class="card-body py-2">
+    <div class="d-flex justify-content-between">
+      <div>🔴 <strong>Тягач 403 простаивал 31 дн без ремонта</strong></div>
+      <div class="text-success"><strong>39к ₽/мес</strong></div>
     </div>
     <div class="small text-muted mt-1">Проверить с механиком: ремонт? хранение? Если ремонт >300к — продать. Иначе — найти заказы или вывести из парка.</div>
   </div>
@@ -250,8 +288,8 @@
 <div class="card mb-2 border-warning" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🟠 <strong>149 — 5 ремонта за период (всего 5 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
+      <div>🟠 <strong>617 — 2 ремонта за период (всего 3 дн)</strong></div>
+      <div class="text-success"><strong>84к ₽/мес</strong></div>
     </div>
     <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
   </div>
@@ -259,8 +297,8 @@
 <div class="card mb-2 border-warning" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🟠 <strong>276 — 5 ремонта за период (всего 9 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
+      <div>🟠 <strong>428 — 3 ремонта за период (всего 4 дн)</strong></div>
+      <div class="text-success"><strong>53к ₽/мес</strong></div>
     </div>
     <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
   </div>
@@ -268,8 +306,8 @@
 <div class="card mb-2 border-warning" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🟠 <strong>330 — 2 ремонта за период (всего 2 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
+      <div>🟠 <strong>709 — 2 ремонта за период (всего 2 дн)</strong></div>
+      <div class="text-success"><strong>26к ₽/мес</strong></div>
     </div>
     <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
   </div>
@@ -277,8 +315,8 @@
 <div class="card mb-2 border-warning" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🟠 <strong>455 — 3 ремонта за период (всего 3 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
+      <div>🟠 <strong>546 — 4 ремонта за период (всего 4 дн)</strong></div>
+      <div class="text-success"><strong>26к ₽/мес</strong></div>
     </div>
     <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
   </div>
@@ -286,62 +324,8 @@
 <div class="card mb-2 border-warning" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🟠 <strong>471 — 7 ремонта за период (всего 8 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
-    </div>
-    <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
-  </div>
-</div>
-<div class="card mb-2 border-warning" style="border-left-width: 4px;">
-  <div class="card-body py-2">
-    <div class="d-flex justify-content-between">
-      <div>🟠 <strong>546 — 3 ремонта за период (всего 3 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
-    </div>
-    <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
-  </div>
-</div>
-<div class="card mb-2 border-warning" style="border-left-width: 4px;">
-  <div class="card-body py-2">
-    <div class="d-flex justify-content-between">
-      <div>🟠 <strong>556 — 3 ремонта за период (всего 3 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
-    </div>
-    <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
-  </div>
-</div>
-<div class="card mb-2 border-warning" style="border-left-width: 4px;">
-  <div class="card-body py-2">
-    <div class="d-flex justify-content-between">
-      <div>🟠 <strong>578 — 2 ремонта за период (всего 2 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
-    </div>
-    <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
-  </div>
-</div>
-<div class="card mb-2 border-warning" style="border-left-width: 4px;">
-  <div class="card-body py-2">
-    <div class="d-flex justify-content-between">
-      <div>🟠 <strong>617 — 2 ремонта за период (всего 2 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
-    </div>
-    <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
-  </div>
-</div>
-<div class="card mb-2 border-warning" style="border-left-width: 4px;">
-  <div class="card-body py-2">
-    <div class="d-flex justify-content-between">
-      <div>🟠 <strong>792 — 2 ремонта за период (всего 2 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
-    </div>
-    <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
-  </div>
-</div>
-<div class="card mb-2 border-warning" style="border-left-width: 4px;">
-  <div class="card-body py-2">
-    <div class="d-flex justify-content-between">
-      <div>🟠 <strong>796 — 2 ремонта за период (всего 2 дн)</strong></div>
-      <div class="text-success"><strong>50к ₽/мес</strong></div>
+      <div>🟠 <strong>641 — 4 ремонта за период (всего 5 дн)</strong></div>
+      <div class="text-success"><strong>25к ₽/мес</strong></div>
     </div>
     <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
   </div>
@@ -349,52 +333,41 @@
 <div class="card mb-2 border-info" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🟡 <strong>Тягач 518 (Sitrak) — ₽/км на 150% выше медианы</strong></div>
-      <div class="text-success"><strong>561к ₽/мес</strong></div>
+      <div>🟡 <strong>Насос 617 — запчасти 557к ₽ за период</strong></div>
+      <div class="text-success"><strong>139к ₽/мес</strong></div>
     </div>
-    <div class="small text-muted mt-1">Разобрать структуру: запчасти, ДТ, ЗП. Если хроническое — перевести на короткие плечи или планировать замену.</div>
+    <div class="small text-muted mt-1">Запросить у механика топ-5 позиций. Цены и обоснованность. Возможно капремонт замаскирован под текущий.</div>
   </div>
 </div>
 <div class="card mb-2 border-info" style="border-left-width: 4px;">
   <div class="card-body py-2">
     <div class="d-flex justify-content-between">
-      <div>🟡 <strong>Тягач 631 (Sitrak) — ₽/км на 37% выше медианы</strong></div>
-      <div class="text-success"><strong>153к ₽/мес</strong></div>
+      <div>🟡 <strong>Спецтех 992 — запчасти 277к ₽ за период</strong></div>
+      <div class="text-success"><strong>69к ₽/мес</strong></div>
     </div>
-    <div class="small text-muted mt-1">Разобрать структуру: запчасти, ДТ, ЗП. Если хроническое — перевести на короткие плечи или планировать замену.</div>
+    <div class="small text-muted mt-1">Запросить у механика топ-5 позиций. Цены и обоснованность. Возможно капремонт замаскирован под текущий.</div>
+  </div>
+</div>
+<div class="card mb-2 border-info" style="border-left-width: 4px;">
+  <div class="card-body py-2">
+    <div class="d-flex justify-content-between">
+      <div>🟡 <strong>Тягач 428 — запчасти 263к ₽ за период</strong></div>
+      <div class="text-success"><strong>66к ₽/мес</strong></div>
+    </div>
+    <div class="small text-muted mt-1">Запросить у механика топ-5 позиций. Цены и обоснованность. Возможно капремонт замаскирован под текущий.</div>
+  </div>
+</div>
+<div class="card mb-2 border-info" style="border-left-width: 4px;">
+  <div class="card-body py-2">
+    <div class="d-flex justify-content-between">
+      <div>🟡 <strong>674 — 2 ремонта за период (всего 2 дн)</strong></div>
+      <div class="text-success"><strong>18к ₽/мес</strong></div>
+    </div>
+    <div class="small text-muted mt-1">Повторный ремонт = плохая диагностика или системная поломка. Запросить у механика детальное заключение перед следующим запуском.</div>
   </div>
 </div>
   </section>
 
-  
-  <section id="ai" class="mt-4">
-    <h3>🤖 AI-рекомендации от Claude</h3>
-    <p class="text-muted small mb-3">Анализ от Claude (через ClaudeClaw OAuth). Дополняет правила неочевидными инсайтами.</p>
-    <div class="ai-block"><p><h5 class='mt-3'>🔴 Критично</h5></p>
-<ul class='list-unstyled'>
-<li class='mb-2'><strong>7871 (Спецтех) — списать или капиталить, не держать в «полумёртвом» состоянии.</strong> 90% месяца в ремонте + 597к затрат = машина не работает, а деньги ест. Если нет утверждённого плана капремонта с выходом в строй до 15 мая — выводить из парка и перекрывать функцию арендой. Эффект: <strong>~600к ₽/мес</strong> прямых затрат + освобождение ремзоны.</li>
-</ul>
-<ul class='list-unstyled'>
-<li class='mb-2'><strong>518 (Тягач) — разобрать с механиком природу 608к на запчасти.</strong> Это 75% себестоимости машины за месяц при 0 дней ремонта — значит, запчасти ставились «на ходу» или закупались впрок. Если это хронические замены — машина-кандидат на вывод. Если разовый капремонт — зафиксировать и контролировать следующие 2 месяца. Эффект: до <strong>936к ₽/мес</strong> при замене на исправную единицу.</li>
-</ul>
-<p><h5 class='mt-3'>🟡 На этой неделе</h5></p>
-<ul class='list-unstyled'>
-<li class='mb-2'><strong>276, 572, 979 — три машины-«зомби» в ремонте 43–60% времени.</strong> Они не в топ-10 по затратам, значит стоят без движения и без вложений — ни чинят толком, ни работают. Поставить каждой дедлайн выхода из ремонта (7 дней). Не вышла — на продажу. Эффект: <strong>возврат 3 единиц в работу или высвобождение ~1.5 млн ₽ при продаже</strong>.</li>
-</ul>
-<ul class='list-unstyled'>
-<li class='mb-2'><strong>Легковые (7 шт) + Прочее (3 шт) — 569к ₽/мес при 0% занятости.</strong> 10 единиц не сделали ни одного рейса. Провести инвентаризацию: кто реально пользуется, оформить путевые листы или сократить парк на 3–4 единицы. Эффект: <strong>150–250к ₽/мес</strong> на страховке, ТО, амортизации.</li>
-</ul>
-<ul class='list-unstyled'>
-<li class='mb-2'><strong>312 и 493 — загрузить или передать на другую базу.</strong> 13–17% занятости без единого дня ремонта = машины исправны, но простаивают. Проверить, есть ли на других базах дефицит этого типа. Если нет — один из двух вывести на сезонное хранение. Эффект: <strong>~80–120к ₽/мес</strong> на содержании простаивающей единицы.</li>
-</ul>
-<p><h5 class='mt-3'>🟢 В работу</h5></p>
-<ul class='list-unstyled'>
-<li class='mb-2'><strong>Тягачи — 7 из 10 самых дорогих машин при 57% занятости.</strong> 8.12 млн на 20 тягачей = 406к/шт/мес, но почти половина времени стоят. Посчитать, можно ли закрыть текущий объём 16–17 тягачами при росте занятости до 70%. Высвободить 3 единицы — сдать в аренду или продать. Эффект: <strong>~1.2 млн ₽/мес</strong> (3 × 406к).</li>
-</ul>
-<ul class='list-unstyled'>
-<li class='mb-2'><strong>Спецтехника — худшая занятость среди рабочих типов (51%), 23 единицы.</strong> Каждый процент простоя — ~100к ₽ упущенной загрузки. Запросить у диспетчеров план-факт по заявкам: если заявок меньше мощности — сократить парк на 2–3 единицы; если заявки есть, но машины недоступны — проблема в ремонтах (см. 7871 выше). Эффект: <strong>230–350к ₽/мес</strong> при выводе 2 единиц.</li>
-</ul></div>
-  </section>
   
 
   <nav class="sticky-top bg-white py-2 mb-3 border-bottom" style="top: 0; z-index: 100;"><div class="container-fluid d-flex flex-wrap gap-1" style="max-width:1400px;"><a class="nav-link" href="#top">⬆ Наверх</a><a class="nav-link" href="#type-миксер">🚚 Миксер</a><a class="nav-link" href="#type-тягач">🚛 Тягач</a><a class="nav-link" href="#type-насос">⚙ Насос</a><a class="nav-link" href="#type-спецтех">🏗 Спецтех</a><a class="nav-link" href="#type-фронтальник">🚜 Фронтальник</a><a class="nav-link" href="#type-кму-жби">🛠 КМУ ЖБИ</a><a class="nav-link" href="#type-погрузчик">📦 Погрузчик</a><a class="nav-link" href="#type-легковая-сервис">🚙 Легковая (сервис)</a><a class="nav-link" href="#type-прочее">📦 Прочее</a><a class="nav-link" href="#sources">📡 Источники</a></div></nav>
@@ -403,94 +376,94 @@
 <section id="type-миксер" class="mt-5">
   <div class="d-flex align-items-baseline gap-3">
     <h2 class="mb-0">🚚 Миксер</h2>
-    <span class="text-muted">28 машин</span>
+    <span class="text-muted">25 машин</span>
   </div>
   <hr class="mt-1">
   
 <div class="row g-2 mb-2">
-  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>28</strong> (24 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>6.92 млн ₽</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>1 739</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Объём</div><div class="fs-5"><strong>12 332 м³</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>25</strong> (23 активных)</div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>6.91 млн ₽</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>1 983</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Объём</div><div class="fs-5"><strong>14 309 м³</strong></div></div>
 </div>
-  <div class="mt-3"><h6>По подтипу</h6><table class="table table-sm"><thead><tr><th>Подтип</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Пробег/мч</th><th class="text-end">Затраты</th></tr></thead><tbody><tr><td><strong>10 м³</strong></td><td class="text-end">13</td><td class="text-end">1 093</td><td class="text-end">38 781</td><td class="text-end">3.81 млн ₽</td></tr><tr><td><strong>9 м³</strong></td><td class="text-end">13</td><td class="text-end">646</td><td class="text-end">21 655</td><td class="text-end">3.10 млн ₽</td></tr><tr><td><strong>7 м³</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">—</td><td class="text-end">—</td></tr></tbody></table></div>
-  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>ТИМ</strong></td><td class="text-end">6</td><td class="text-end">291</td><td class="text-end">2.01 млн ₽</td><td class="text-end">24</td></tr><tr><td><strong>НТ</strong></td><td class="text-end">7</td><td class="text-end">493</td><td class="text-end">1.83 млн ₽</td><td class="text-end">18</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">7</td><td class="text-end">601</td><td class="text-end">1.58 млн ₽</td><td class="text-end">4</td></tr><tr><td><strong>КР</strong></td><td class="text-end">6</td><td class="text-end">354</td><td class="text-end">1.50 млн ₽</td><td class="text-end">13</td></tr><tr><td><strong>—</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">—</td><td class="text-end">0</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По подтипу</h6><table class="table table-sm"><thead><tr><th>Подтип</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Пробег/мч</th><th class="text-end">Затраты</th></tr></thead><tbody><tr><td><strong>10 м³</strong></td><td class="text-end">13</td><td class="text-end">1 395</td><td class="text-end">51 728</td><td class="text-end">4.66 млн ₽</td></tr><tr><td><strong>9 м³</strong></td><td class="text-end">12</td><td class="text-end">588</td><td class="text-end">21 289</td><td class="text-end">2.25 млн ₽</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>ТИМ</strong></td><td class="text-end">5</td><td class="text-end">368</td><td class="text-end">2.29 млн ₽</td><td class="text-end">10</td></tr><tr><td><strong>НТ</strong></td><td class="text-end">6</td><td class="text-end">629</td><td class="text-end">1.89 млн ₽</td><td class="text-end">9</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">7</td><td class="text-end">588</td><td class="text-end">1.41 млн ₽</td><td class="text-end">0</td></tr><tr><td><strong>КР</strong></td><td class="text-end">6</td><td class="text-end">398</td><td class="text-end">1.33 млн ₽</td><td class="text-end">12</td></tr><tr><td><strong>—</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">1к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
   
 <div class="row g-3 mt-3">
   <div class="col-md-6"><div class="card border-success"><div class="card-body py-2">
     <div class="small text-muted">🏆 Лидер</div>
-    <div><strong>535</strong> А535ЕУ193</div>
-    <div class="small">ДИН · 920 м³ · 143 рейсов</div>
+    <div><strong>867</strong> О867ЕХ193</div>
+    <div class="small">НТ · 1 041 м³ · 134 рейсов</div>
   </div></div></div>
   <div class="col-md-6"><div class="card border-danger"><div class="card-body py-2">
     <div class="small text-muted">🐌 Аутсайдер</div>
-    <div><strong>276</strong> С276МО123</div>
-    <div class="small">ТИМ · 9 м³ · 1 рейсов</div>
+    <div><strong>471</strong> Х471ВЕ123</div>
+    <div class="small">КР · — м³ · 1 рейсов</div>
   </div></div></div>
 </div>
-  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>827</strong> (4 лет) — score <strong>0.60</strong>, запчасти 341к ₽, ремонт 1 дн.</li><li><strong>276</strong> (13 лет) — score <strong>0.50</strong>, запчасти 48к ₽, ремонт 18 дн.</li><li><strong>149</strong> (10 лет) — score <strong>0.50</strong>, запчасти 51к ₽, ремонт 3 дн.</li></ul></div>
+  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>572</strong> (22 лет) — score <strong>0.50</strong>, запчасти 33к ₽, ремонт 5 дн.</li><li><strong>149</strong> (10 лет) — score <strong>0.50</strong>, запчасти 50к ₽, ремонт 6 дн.</li><li><strong>479</strong> (14 лет) — score <strong>0.50</strong>, запчасти 51к ₽, ремонт 0 дн.</li></ul></div>
 </section>
 
 <section id="type-тягач" class="mt-5">
   <div class="d-flex align-items-baseline gap-3">
     <h2 class="mb-0">🚛 Тягач</h2>
-    <span class="text-muted">20 машин</span>
+    <span class="text-muted">21 машин</span>
   </div>
   <hr class="mt-1">
   
 <div class="row g-2 mb-2">
-  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>20</strong> (19 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>8.88 млн ₽</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>834</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>172 114 км</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>21</strong> (18 активных)</div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>12.63 млн ₽</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>1 075</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>210 484 км</strong></div></div>
 </div>
-  <div class="mt-3"><h6>По подтипу</h6><table class="table table-sm"><thead><tr><th>Подтип</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Пробег/мч</th><th class="text-end">Затраты</th></tr></thead><tbody><tr><td><strong>Sitrak</strong></td><td class="text-end">7</td><td class="text-end">307</td><td class="text-end">76 584</td><td class="text-end">4.13 млн ₽</td></tr><tr><td><strong>ДАФ</strong></td><td class="text-end">8</td><td class="text-end">309</td><td class="text-end">58 480</td><td class="text-end">2.57 млн ₽</td></tr><tr><td><strong>Вольво</strong></td><td class="text-end">5</td><td class="text-end">218</td><td class="text-end">37 050</td><td class="text-end">2.17 млн ₽</td></tr></tbody></table></div>
-  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>НТ</strong></td><td class="text-end">6</td><td class="text-end">233</td><td class="text-end">3.65 млн ₽</td><td class="text-end">0</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">9</td><td class="text-end">414</td><td class="text-end">3.54 млн ₽</td><td class="text-end">0</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">3</td><td class="text-end">144</td><td class="text-end">1.25 млн ₽</td><td class="text-end">0</td></tr><tr><td><strong>КР</strong></td><td class="text-end">2</td><td class="text-end">43</td><td class="text-end">439к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По подтипу</h6><table class="table table-sm"><thead><tr><th>Подтип</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Пробег/мч</th><th class="text-end">Затраты</th></tr></thead><tbody><tr><td><strong>Sitrak</strong></td><td class="text-end">7</td><td class="text-end">490</td><td class="text-end">110 182</td><td class="text-end">6.38 млн ₽</td></tr><tr><td><strong>ДАФ</strong></td><td class="text-end">8</td><td class="text-end">358</td><td class="text-end">69 935</td><td class="text-end">4.36 млн ₽</td></tr><tr><td><strong>Вольво</strong></td><td class="text-end">5</td><td class="text-end">214</td><td class="text-end">30 367</td><td class="text-end">1.89 млн ₽</td></tr><tr><td><strong>Прочее</strong></td><td class="text-end">1</td><td class="text-end">13</td><td class="text-end">—</td><td class="text-end">—</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>ДИН</strong></td><td class="text-end">9</td><td class="text-end">589</td><td class="text-end">5.52 млн ₽</td><td class="text-end">0</td></tr><tr><td><strong>НТ</strong></td><td class="text-end">6</td><td class="text-end">333</td><td class="text-end">5.04 млн ₽</td><td class="text-end">5</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">3</td><td class="text-end">133</td><td class="text-end">1.50 млн ₽</td><td class="text-end">1</td></tr><tr><td><strong>КР</strong></td><td class="text-end">2</td><td class="text-end">7</td><td class="text-end">568к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ЖБИ-ДИН</strong></td><td class="text-end">1</td><td class="text-end">13</td><td class="text-end">—</td><td class="text-end">0</td></tr></tbody></table></div>
   
 <div class="row g-3 mt-3">
   <div class="col-md-6"><div class="card border-success"><div class="card-body py-2">
     <div class="small text-muted">🏆 Лидер</div>
-    <div><strong>674</strong> У674ВА323</div>
-    <div class="small">ТИМ · 18 057 км · 58 рейсов</div>
+    <div><strong>709</strong> О709ЕХ193</div>
+    <div class="small">НТ · 22 355 км · 89 рейсов</div>
   </div></div></div>
   <div class="col-md-6"><div class="card border-danger"><div class="card-body py-2">
     <div class="small text-muted">🐌 Аутсайдер</div>
-    <div><strong>493</strong> Е493ТС123</div>
-    <div class="small">ДИН · 1 646 км · 12 рейсов</div>
+    <div><strong>769</strong> </div>
+    <div class="small">ЖБИ-ДИН · — км · 13 рейсов</div>
   </div></div></div>
 </div>
-  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>518</strong> (3 лет) — score <strong>0.60</strong>, запчасти 608к ₽, ремонт 0 дн.</li><li><strong>312</strong> (22 лет) — score <strong>0.60</strong>, запчасти 93к ₽, ремонт 0 дн.</li><li><strong>641</strong> (18 лет) — score <strong>0.50</strong>, запчасти 149к ₽, ремонт 0 дн.</li></ul></div>
+  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>428</strong> (8 лет) — score <strong>0.70</strong>, запчасти 263к ₽, ремонт 3 дн.</li><li><strong>790</strong> (16 лет) — score <strong>0.60</strong>, запчасти 198к ₽, ремонт 0 дн.</li><li><strong>376</strong> (15 лет) — score <strong>0.50</strong>, запчасти 24к ₽, ремонт 0 дн.</li></ul></div>
 </section>
 
 <section id="type-насос" class="mt-5">
   <div class="d-flex align-items-baseline gap-3">
     <h2 class="mb-0">⚙ Насос</h2>
-    <span class="text-muted">6 машин</span>
+    <span class="text-muted">5 машин</span>
   </div>
   <hr class="mt-1">
   
 <div class="row g-2 mb-2">
-  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>6</strong> (5 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>1.64 млн ₽</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>120</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>10 067 км</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>5</strong> (4 активных)</div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>2.57 млн ₽</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>167</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>14 523 км</strong></div></div>
 </div>
   
-  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>НТ</strong></td><td class="text-end">2</td><td class="text-end">49</td><td class="text-end">940к ₽</td><td class="text-end">5</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">2</td><td class="text-end">53</td><td class="text-end">503к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">1</td><td class="text-end">18</td><td class="text-end">201к ₽</td><td class="text-end">0</td></tr><tr><td><strong>—</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">—</td><td class="text-end">0</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>НТ</strong></td><td class="text-end">3</td><td class="text-end">119</td><td class="text-end">1.34 млн ₽</td><td class="text-end">5</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">665к ₽</td><td class="text-end">3</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">1</td><td class="text-end">48</td><td class="text-end">571к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
   
 <div class="row g-3 mt-3">
   <div class="col-md-6"><div class="card border-success"><div class="card-body py-2">
     <div class="small text-muted">🏆 Лидер</div>
-    <div><strong>463</strong> Е463УТ193</div>
-    <div class="small">ДИН · 32 рейсов · 32 рейсов</div>
+    <div><strong>721</strong> М721ЕЕ123</div>
+    <div class="small">НТ · 66 рейсов · 66 рейсов</div>
   </div></div></div>
   <div class="col-md-6"><div class="card border-danger"><div class="card-body py-2">
     <div class="small text-muted">🐌 Аутсайдер</div>
-    <div><strong>617</strong> У617КУ123</div>
-    <div class="small">ТИМ · 18 рейсов · 18 рейсов</div>
+    <div><strong>574</strong> Р574КТ193</div>
+    <div class="small">НТ · 13 рейсов · 13 рейсов</div>
   </div></div></div>
 </div>
-  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>350</strong> (2 лет) — score <strong>0.60</strong>, запчасти 287к ₽, ремонт 0 дн.</li><li><strong>721</strong> (33 лет) — score <strong>0.50</strong>, запчасти 149к ₽, ремонт 5 дн.</li></ul></div>
+  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>617</strong> (36 лет) — score <strong>0.80</strong>, запчасти 557к ₽, ремонт 3 дн.</li><li><strong>574</strong> (35 лет) — score <strong>0.50</strong>, запчасти 47к ₽, ремонт 5 дн.</li></ul></div>
 </section>
 
 <section id="type-спецтех" class="mt-5">
@@ -501,32 +474,32 @@
   <hr class="mt-1">
   
 <div class="row g-2 mb-2">
-  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>23</strong> (19 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>5.34 млн ₽</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>23</strong> (17 активных)</div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>5.08 млн ₽</strong></div></div>
   <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>—</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>6 107 км</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>6 487 км</strong></div></div>
 </div>
-  <div class="mt-3"><h6>По подтипу</h6><table class="table table-sm"><thead><tr><th>Подтип</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Пробег/мч</th><th class="text-end">Затраты</th></tr></thead><tbody><tr><td><strong>Автокран</strong></td><td class="text-end">10</td><td class="text-end">—</td><td class="text-end">3 444</td><td class="text-end">1.99 млн ₽</td></tr><tr><td><strong>Манипулятор</strong></td><td class="text-end">8</td><td class="text-end">—</td><td class="text-end">2 252</td><td class="text-end">1.90 млн ₽</td></tr><tr><td><strong>Экскаватор</strong></td><td class="text-end">5</td><td class="text-end">—</td><td class="text-end">411</td><td class="text-end">1.44 млн ₽</td></tr></tbody></table></div>
-  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>—</strong></td><td class="text-end">18</td><td class="text-end">—</td><td class="text-end">3.94 млн ₽</td><td class="text-end">12</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">3</td><td class="text-end">—</td><td class="text-end">761к ₽</td><td class="text-end">15</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">597к ₽</td><td class="text-end">27</td></tr><tr><td><strong>КР</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">37к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По подтипу</h6><table class="table table-sm"><thead><tr><th>Подтип</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Пробег/мч</th><th class="text-end">Затраты</th></tr></thead><tbody><tr><td><strong>Автокран</strong></td><td class="text-end">9</td><td class="text-end">—</td><td class="text-end">2 247</td><td class="text-end">2.00 млн ₽</td></tr><tr><td><strong>Манипулятор</strong></td><td class="text-end">8</td><td class="text-end">—</td><td class="text-end">3 886</td><td class="text-end">1.83 млн ₽</td></tr><tr><td><strong>Экскаватор</strong></td><td class="text-end">6</td><td class="text-end">—</td><td class="text-end">354</td><td class="text-end">1.25 млн ₽</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>—</strong></td><td class="text-end">11</td><td class="text-end">—</td><td class="text-end">3.29 млн ₽</td><td class="text-end">31</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">10</td><td class="text-end">—</td><td class="text-end">1.50 млн ₽</td><td class="text-end">21</td></tr><tr><td><strong>КР</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">277к ₽</td><td class="text-end">2</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">18к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
   
-  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>573</strong> (20 лет) — score <strong>0.60</strong>, запчасти 151к ₽, ремонт 0 дн.</li><li><strong>759</strong> (6 лет) — score <strong>0.50</strong>, запчасти 147к ₽, ремонт 0 дн.</li><li><strong>523</strong> (19 лет) — score <strong>0.50</strong>, запчасти 121к ₽, ремонт 2 дн.</li></ul></div>
+  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>992</strong> (5 лет) — score <strong>0.60</strong>, запчасти 277к ₽, ремонт 19 дн.</li></ul></div>
 </section>
 
 <section id="type-фронтальник" class="mt-5">
   <div class="d-flex align-items-baseline gap-3">
     <h2 class="mb-0">🚜 Фронтальник</h2>
-    <span class="text-muted">8 машин</span>
+    <span class="text-muted">7 машин</span>
   </div>
   <hr class="mt-1">
   
 <div class="row g-2 mb-2">
-  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>8</strong> (6 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>661к ₽</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>49</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>867 км</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>7</strong> (6 активных)</div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>230к ₽</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>27</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>15 км</strong></div></div>
 </div>
   
-  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>ДИН</strong></td><td class="text-end">4</td><td class="text-end">—</td><td class="text-end">347к ₽</td><td class="text-end">0</td></tr><tr><td><strong>НТ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">149к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">2</td><td class="text-end">49</td><td class="text-end">95к ₽</td><td class="text-end">0</td></tr><tr><td><strong>КР</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">71к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>КР</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">141к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">2</td><td class="text-end">27</td><td class="text-end">42к ₽</td><td class="text-end">0</td></tr><tr><td><strong>НТ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">31к ₽</td><td class="text-end">1</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">3</td><td class="text-end">—</td><td class="text-end">16к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
   
   
 </section>
@@ -540,9 +513,9 @@
   
 <div class="row g-2 mb-2">
   <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>1</strong> (1 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>145к ₽</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>36</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>3 281 км</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>—</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>26</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>— км</strong></div></div>
 </div>
   
   
@@ -553,20 +526,20 @@
 <section id="type-погрузчик" class="mt-5">
   <div class="d-flex align-items-baseline gap-3">
     <h2 class="mb-0">📦 Погрузчик</h2>
-    <span class="text-muted">6 машин</span>
+    <span class="text-muted">18 машин</span>
   </div>
   <hr class="mt-1">
   
 <div class="row g-2 mb-2">
-  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>6</strong> (3 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>178к ₽</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>18</strong> (3 активных)</div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>766к ₽</strong></div></div>
   <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>—</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>397 км</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>1 348 км</strong></div></div>
 </div>
-  <div class="mt-3"><h6>По подтипу</h6><table class="table table-sm"><thead><tr><th>Подтип</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Пробег/мч</th><th class="text-end">Затраты</th></tr></thead><tbody><tr><td><strong>Прочее</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">55</td><td class="text-end">143к ₽</td></tr><tr><td><strong>Вилочный</strong></td><td class="text-end">4</td><td class="text-end">—</td><td class="text-end">342</td><td class="text-end">34к ₽</td></tr></tbody></table></div>
-  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>НТ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">138к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">16к ₽</td><td class="text-end">0</td></tr><tr><td><strong>—</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">13к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">11к ₽</td><td class="text-end">0</td></tr><tr><td><strong>КР</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">—</td><td class="text-end">0</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По подтипу</h6><table class="table table-sm"><thead><tr><th>Подтип</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Пробег/мч</th><th class="text-end">Затраты</th></tr></thead><tbody><tr><td><strong>Фронт. погрузчик</strong></td><td class="text-end">7</td><td class="text-end">—</td><td class="text-end">976</td><td class="text-end">689к ₽</td></tr><tr><td><strong>Вилочный</strong></td><td class="text-end">6</td><td class="text-end">—</td><td class="text-end">337</td><td class="text-end">66к ₽</td></tr><tr><td><strong>Прочее</strong></td><td class="text-end">5</td><td class="text-end">—</td><td class="text-end">35</td><td class="text-end">12к ₽</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>—</strong></td><td class="text-end">12</td><td class="text-end">—</td><td class="text-end">740к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">12к ₽</td><td class="text-end">0</td></tr><tr><td><strong>КР</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">10к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">3к ₽</td><td class="text-end">0</td></tr><tr><td><strong>НТ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">—</td><td class="text-end">0</td></tr></tbody></table></div>
   
-  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>Чех НТ гар 9</strong> (19 лет) — score <strong>0.50</strong>, запчасти 138к ₽, ремонт 0 дн.</li></ul></div>
+  
 </section>
 
 <section id="type-легковая-сервис" class="mt-5">
@@ -578,14 +551,14 @@
   
 <div class="row g-2 mb-2">
   <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>7</strong> (0 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>341к ₽</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>292к ₽</strong></div></div>
   <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>—</strong></div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>21 009 км</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>21 139 км</strong></div></div>
 </div>
   
-  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>ДИН</strong></td><td class="text-end">4</td><td class="text-end">—</td><td class="text-end">206к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">78к ₽</td><td class="text-end">2</td></tr><tr><td><strong>НТ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">43к ₽</td><td class="text-end">0</td></tr><tr><td><strong>—</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">13к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
+  <div class="mt-3"><h6>По базам</h6><table class="table table-sm"><thead><tr><th>База</th><th class="text-end">Машин</th><th class="text-end">Рейсов</th><th class="text-end">Затраты</th><th class="text-end">Ремонт-дн.</th></tr></thead><tbody><tr><td><strong>—</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">117к ₽</td><td class="text-end">0</td></tr><tr><td><strong>ТИМ</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">71к ₽</td><td class="text-end">1</td></tr><tr><td><strong>ДИН</strong></td><td class="text-end">2</td><td class="text-end">—</td><td class="text-end">68к ₽</td><td class="text-end">0</td></tr><tr><td><strong>НТ</strong></td><td class="text-end">1</td><td class="text-end">—</td><td class="text-end">36к ₽</td><td class="text-end">0</td></tr></tbody></table></div>
   
-  
+  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>111</strong> (15 лет) — score <strong>0.50</strong>, запчасти 60к ₽, ремонт 0 дн.</li></ul></div>
 </section>
 
 <section id="type-прочее" class="mt-5">
@@ -597,14 +570,14 @@
   
 <div class="row g-2 mb-2">
   <div class="col-6 col-md-3"><div class="small text-muted">Машин</div><div class="fs-5"><strong>3</strong> (0 активных)</div></div>
-  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>228к ₽</strong></div></div>
+  <div class="col-6 col-md-3"><div class="small text-muted">Затраты</div><div class="fs-5"><strong>44к ₽</strong></div></div>
   <div class="col-6 col-md-3"><div class="small text-muted">Рейсов</div><div class="fs-5"><strong>—</strong></div></div>
   <div class="col-6 col-md-3"><div class="small text-muted">Пробег/мч</div><div class="fs-5"><strong>— км</strong></div></div>
 </div>
   
   
   
-  <div class="mt-3"><h6>🔴 Под наблюдением (lifecycle ≥ 0.5)</h6><ul class="small"><li><strong>5379</strong> (9 лет) — score <strong>0.70</strong>, запчасти 228к ₽, ремонт 0 дн.</li></ul></div>
+  
 </section>
 
 
@@ -612,7 +585,7 @@
     <h3>📡 Источники данных</h3>
     <div class="card"><div class="card-body">
       <p class="small text-muted mb-2">Статус загрузки источников на момент сборки отчёта.</p>
-      <span class="badge me-2 mb-1 fs-6 bg-success">anomalies: 13</span><span class="badge me-2 mb-1 fs-6 bg-success">glonass_roster: 84</span><span class="badge me-2 mb-1 fs-6 bg-success">repairs: 44</span><span class="badge me-2 mb-1 fs-6 bg-success">shipments: 3059</span>
+      <span class="badge me-2 mb-1 fs-6 bg-success">anomalies: 16</span><span class="badge me-2 mb-1 fs-6 bg-success">glonass_roster: 81</span><span class="badge me-2 mb-1 fs-6 bg-success">repairs: 49</span><span class="badge me-2 mb-1 fs-6 bg-success">shipments: 3562</span>
     </div></div>
   </section>
 
